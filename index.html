@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>News Explorer</h1>
+        <div class="header-actions">
+          <button id="bookmarksBtn" class="action-btn">
+            <i class="fas fa-bookmark"></i>
+            <span>Bookmarks</span>
+          </button>
+        </div>
+        <div class="search-container">
+          <input type="text" id="search" placeholder="Search for news..." />
+          <button id="searchBtn">Search</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout-container">
+      <!-- Left Sidebar -->
+      <aside class="sidebar sidebar-left">
+        <div class="navigation-container">
+          <!-- Quick Navigation -->
+          <div class="quick-nav">
+            <h3>Quick Navigation</h3>
+            <ul class="topic-list">
+              <li>
+                <button><i class="fas fa-microchip"></i> Technology</button>
+              </li>
+              <li>
+                <button><i class="fas fa-flask"></i> Science</button>
+              </li>
+              <li>
+                <button><i class="fas fa-heartbeat"></i> Health</button>
+              </li>
+              <li>
+                <button><i class="fas fa-football-ball"></i> Sports</button>
+              </li>
+              <li>
+                <button><i class="fas fa-chart-line"></i> Business</button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Trending Topics -->
+          <div class="quick-nav">
+            <h3>Trending Topics</h3>
+            <div class="tags-cloud">
+              <div class="tag"><span>#AI</span></div>
+              <div class="tag"><span>#Climate</span></div>
+              <div class="tag"><span>#Space</span></div>
+              <div class="tag"><span>#COVID</span></div>
+              <div class="tag"><span>#Crypto</span></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div id="loading-spinner"></div>
+        <div id="news-container"></div>
+
+        <!-- Statistics Section -->
+        <div class="stats-section">
+          <h3>Statistics</h3>
+          <div class="stats-item">
+            <span>Articles Today:</span>
+            <span>142</span>
+          </div>
+          <div class="stats-item">
+            <span>Active Users:</span>
+            <span>1,337</span>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right Sidebar -->
+      <aside class="sidebar sidebar-right">
+        <div class="activity-feed">
+          <h3>Recent Activity</h3>
+          <div class="activity-item">
+            <p>New bookmark added</p>
+            <span class="activity-time">2 minutes ago</span>
+          </div>
+          <div class="activity-item">
+            <p>Language changed to Spanish</p>
+            <span class="activity-time">5 minutes ago</span>
+          </div>
+          <div class="activity-item">
+            <p>Article shared</p>
+            <span class="activity-time">10 minutes ago</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
